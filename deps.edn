@@ -1,0 +1,22 @@
+{:path ["src"]
+ :deps
+ {org.clojure/clojure {:mvn/version "1.10.1"}
+
+  org.clojure/clojurescript {:mvn/version "1.10.758"}
+  thheller/shadow-cljs      {:mvn/version "2.11.2"}
+
+  cider/cider-nrepl             {:mvn/version "0.25.3"}
+  refactor-nrepl/refactor-nrepl {:mvn/version "2.5.0"}
+
+  uix.core {:git/url   "https://github.com/rschmukler/uix.git"
+            :deps/root "core"
+            :sha       "5f9953e4482b1bc8e198026a2fd9f6e7ffa0e23e"}
+  uix.dom  {:git/url   "https://github.com/roman01la/uix.git"
+            :deps/root "dom"
+            :sha       "fc98f57a01d16228e709fb1ad4c2a504c65964d3"}
+  uix.rn   {:git/url   "https://github.com/roman01la/uix.git"
+            :deps/root "rn"
+            :sha       "fc98f57a01d16228e709fb1ad4c2a504c65964d3"}}
+
+ :aliases
+ {}}

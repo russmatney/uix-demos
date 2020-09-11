@@ -1,0 +1,26 @@
+{:deps true
+
+ :nrepl {:port 4998
+         :middleware
+         [cider-nrepl.plugin/middleware
+          refactor-nrepl.middleware/wrap-refactor]}
+
+ :builds
+ {
+  :app
+  {:target     :browser
+   :output-dir "public/js/compiled"
+   :asset-path "/js/compiled"
+   :modules    {:main {:entries [uix-demos.core]}}
+
+   ;; :js-options
+   ;; {:resolve
+   ;;  {"react"     {:export-globals ["React"]}
+   ;;   "react-dom" {:export-globals ["ReactDOM"]}}}
+
+   :devtools
+   {:http-root   "public"
+    :http-port   4999
+    :loader-mode :eval
+    :after-load  uix-demos.core/init
+    :repl-pprint true}}}}
